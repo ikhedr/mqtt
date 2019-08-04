@@ -1,0 +1,38 @@
+mosquitto_sub -d -t "test/message"
+while true; do mosquitto_pub -d -t "test/message" -m "ADB78C, B1001, BOLT902, 12"; sleep 1; done
+
+https://thingsboard.io/docs/user-guide/install/ubuntu/
+www.steves-internet-guide.com/multiple-client-connections-python-mqtt/
+https://thingsboard.io/docs/getting-started-guides/what-is-thingsboard/
+https://thingsboard.io/docs/samples/raspberry/temperature/
+
+
+https://github.com/eclipse/paho.mqtt.python/blob/master/examples/loop_asyncio.py
+
+
+ /sbin/iptables -t nat -I PREROUTING --src 0/0 --dst <server_ip> -p tcp --dport 80 -j REDIRECT --to-ports 9191 
+
+
+Notes ThingsBoard:
+
+1. See if what ports running 
+	#sudo lsof -i 
+	#top
+
+2. Kill those processes which using: 8080, mqtt port running 1883/8883
+	#kill -9 <pid>
+
+3. Follow installation guide given in (exclude step 4, dont restrict memory)
+	https://thingsboard.io/docs/user-guide/install/ubuntu/?ubuntuThingsboardDatabase=postgresql
+
+4. If it failes in-between, delete thingsboard database & fresh start
+
+After successfull installation, use following logins: (https://thingsboard.io/docs/samples/demo-account/)
+
+	a. System administrator Default system administrator account: login - sysadmin@thingsboard.org. password - sysadmin. 
+	b. Demo Tenant Default tenant administrator account: login - tenant@thingsboard.org. password - tenant. 
+	c. Demo tenant customers: 
+		Customer A users - customer@thingsboard.org or customerA@thingsboard.org. 
+		Customer B users - customerB@thingsboard.org. 
+		Customer C users - customerC@thingsboard.org. 
+    		all users have “customer” password.		     
