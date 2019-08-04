@@ -36,3 +36,9 @@ After successfull installation, use following logins: (https://thingsboard.io/do
 		Customer B users - customerB@thingsboard.org. 
 		Customer C users - customerC@thingsboard.org. 
     		all users have “customer” password.		     
+
+********************************
+Web testing:
+https://github.com/localtunnel/localtunnel
+https://stackoverflow.com/questions/38050182/how-to-generate-fixed-url-with-ngrok
+http://serveo.net/
